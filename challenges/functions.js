@@ -22,11 +22,9 @@ function add(alpha, beta, cb) {
   return cb(alpha + beta);
 }
 
-
 function multiply(alpha, beta, cb) {
   return cb(alpha * beta)
 }
-
 
 function greeting(alpha, beta, cb) {
   return cb('Hello' + alpha + beta + ', nice to meet you!')
