@@ -98,7 +98,7 @@ console.log(contactInfo);
    Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 for (let i = 0; i < graduates.length; i++) {
-  if (graduates[i].university == "uni") {
+  if (graduates[i].university == "Uni") {
     uni.push(graduates[i].university)
   }
 }

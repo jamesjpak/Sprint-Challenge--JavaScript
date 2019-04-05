@@ -10,7 +10,7 @@
 
 
 function consume(alpha, beta, cb) {
-  return cb(alpha, beta);
+  console.log(cb(alpha, beta));
 }
 
 
@@ -22,26 +22,25 @@ function consume(alpha, beta, cb) {
 */
 
 
-function add(alpha, beta, cb) {
-  return cb(alpha + beta);
+function add(alpha, beta, callback) {
+  return (alpha + beta);
 }
 
-function multiply(alpha, beta, cb) {
-  return cb(alpha * beta)
+function multiply(alpha, beta, callback) {
+  return (alpha * beta)
 }
 
-function greeting(alpha, beta, cb) {
-  return cb('Hello' + alpha + beta + ', nice to meet you!')
+function greeting(firstName, lastName, callback) {
+  return ('Hello ' + firstName + lastName + ', nice to meet you!')
 }
+
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 
-
-
 consume(2,2,add); // 4
 consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume("Mary"," Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
