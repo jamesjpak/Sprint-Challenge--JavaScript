@@ -8,6 +8,13 @@
 */
 
 
+
+function consume(alpha, beta, cb) {
+  console.log(cb(alpha, beta));
+}
+
+
+
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
@@ -15,10 +22,25 @@
 */
 
 
+function add(alpha, beta, callback) {
+  return (alpha + beta);
+}
+
+function multiply(alpha, beta, callback) {
+  return (alpha * beta)
+}
+
+function greeting(firstName, lastName, callback) {
+  return ('Hello ' + firstName + lastName + ', nice to meet you!')
+}
+
+
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+
+consume(2,2,add); // 4
+consume(10,16,multiply); // 160
+consume("Mary"," Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -26,6 +48,12 @@
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+/* 
+
+`nestedfunction()` can access the variable `internal` because 'internal' 
+ is declared in the lexical environment of 'nestedFunction().
+
+ */
 
 
 const external = "I'm outside the function";
